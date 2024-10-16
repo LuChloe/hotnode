@@ -109,7 +109,7 @@ exports.HotLoader = (function() {
       env: process.env
     });
     this.process.stdout.on("data", function(data) {
-      return util.print(data.toString());
+      return console.log(data.toString());
     });
     this.process.stderr.on("data", function(data) {
       return _this.stderrOutput(data.toString());
